@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     AWS_DEFAULT_REGION = 'us-east-1'
-    S3_BUCKET          = 'my-static-site-bucket'
+    S3_BUCKET          = 'jenkins-demo-bucket-fita'
   }
 
   stages {
