@@ -3,13 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Static Site</title>
+  <title>DevOps | Akash</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
-    <h1>Hello from S3!</h1>
-    <p>This static site is deployed via Jenkins.</p>
+
+  <div class="noise"></div>
+  <div class="grid-bg"></div>
+
+  <header class="header">
+    <div class="logo">AK<span class="accent">.</span>DEV</div>
+    <nav class="nav">
+      <a href="#stack">Stack</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-tag">
+        <span class="dot green"></span> LIVE — Deployed via Jenkins → S3
+      </div>
+      <h1 class="hero-title">
+        Building infra<br>
+        that <span class="accent-text">never sleeps.</span>
+      </h1>
+      <p class="hero-sub">
+        DevOps Engineer in training. CI/CD pipelines, cloud deployments, and automation — end to end.
+      </p>
+      <div class="hero-cta">
+        <a href="#pipeline" class="btn-primary">View Pipeline</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="terminal-wrap">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <span class="tb red"></span>
+          <span class="tb yellow"></span>
+          <span class="tb green"></span>
+          <span class="terminal-title">jenkins@pipeline ~ bash</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="t-dim">$</span> git push origin main</p>
+          <p class="t-green">↑ Webhook triggered Jenkins build</p>
+          <p><span class="t-dim">$</span> mvn clean package</p>
+          <p class="t-green">✔ BUILD SUCCESS [2.4s]</p>
+          <p><span class="t-dim">$</span> aws s3 sync ./dist s3://akash-portfolio</p>
+          <p class="t-green">✔ Upload complete — 12 files synced</p>
+          <p><span class="t-dim">$</span> <span class="cursor">█</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section" id="stack">
+      <p class="section-eye">Tools I work with</p>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">☁</div>
+          <h3>AWS</h3>
+          <p>EC2, S3, IAM, VPC — core cloud infrastructure and deployments.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙</div>
+          <h3>Jenkins</h3>
+          <p>CI/CD pipeline automation from code push to live deployment.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🐳</div>
+          <h3>Docker</h3>
+          <p>Containerised apps with Dockerfiles and Compose setups.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🐧</div>
+          <h3>Linux</h3>
+          <p>Ubuntu & Amazon Linux — server setup, Apache, bash scripting.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔁</div>
+          <h3>Git</h3>
+          <p>Version control, branching strategies, and webhook integrations.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Maven</h3>
+          <p>Java build lifecycle management for CI pipeline integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIPELINE -->
+    <section class="section" id="pipeline">
+      <p class="section-eye">How it works</p>
+      <h2 class="section-title">CI/CD Pipeline</h2>
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="pipe-num">01</div>
+          <h3>Push Code</h3>
+          <p>Developer pushes to GitHub — webhook fires instantly.</p>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-num">02</div>
+          <h3>Jenkins Build</h3>
+          <p>Jenkins pulls, runs tests, and packages the app.</p>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-num">03</div>
+          <h3>Deploy to S3</h3>
+          <p>Artifacts synced to S3. Site goes live automatically.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <p class="section-eye">Let's connect</p>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-sub">Open to DevOps roles, internships, and collaboration in Bangalore.</p>
+      <a href="mailto:akash@example.com" class="btn-primary">akash@example.com</a>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <p>Built by Akash · Deployed via Jenkins → AWS S3</p>
+  </footer>
+
 </body>
 </html>
